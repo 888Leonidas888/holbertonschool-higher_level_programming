@@ -32,12 +32,12 @@ def main():
     sql = """
              SELECT *
                FROM states
-       WHERE BINARY name = %s
+       WHERE BINARY name = '{0:s}'
            ORDER BY id ASC
-        """
+        """.format(state_query)
 
     rs = cnn.cursor()
-    rs.execute(sql, (state_query,))
+    rs.execute(sql)
     rows = rs.fetchall()
 
     for row in rows:
