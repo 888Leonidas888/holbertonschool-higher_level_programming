@@ -14,23 +14,37 @@ def main():
     Esta función hace la consulta de la
     tabla states en hbtn_0e_0_usa.
     """
+    user_mysql = sys.argv[1]
+    pass_mysql = sys.argv[2]
+    db_mysql = sys.argv[3]
+    host_mysql = 'localhost'
+    port_mysql = 3306
 
-    db = MySQLdb.connect(
-        host="localhost",
-        user=sys.argv[1],
-        password=sys.argv[2],
-        port=3306,
-        database=sys.argv[3],
+    cnn = MySQLdb.connect(
+        host=host_mysql,
+        user=user_mysql,
+        password=pass_mysql,
+        port=port_mysql,
+        database=db_mysql
     )
-    r = db.cursor()
-    r.execute("SELECT * FROM states  WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
-    rows = r.fetchall()
+
+    sql = """
+             SELECT *
+               FROM states
+              WHERE name
+        LIKE BINARY 'N%'
+           ORDER BY id ASC
+        """
+
+    rs = cnn.cursor()
+    rs.execute(sql)
+    rows = rs.fetchall()
 
     for row in rows:
         print(row)
 
-    r.close()
-    db.close()
+    rs.close()
+    cnn.close()
 
 
 if __name__ == "__main__":
