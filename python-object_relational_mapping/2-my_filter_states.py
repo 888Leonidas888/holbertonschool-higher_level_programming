@@ -32,7 +32,7 @@ def main():
     sql = """
              SELECT *
                FROM states
-              WHERE name = %s
+       WHERE BINARY name = %s
            ORDER BY id ASC
         """
 
