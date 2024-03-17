@@ -1,6 +1,15 @@
 # Higher level programming
 
-Este repositorio usaremos lenguajes de alto de nivel como python, javascript y lenguajes de consultas como SQL:
+En este repositorio veremos lenguajes de programación de alto nivel como
+Python, JavaScript también el lenguaje de consulta SQL. Usaremos MySql como gestor de base de datos y usaremos el ORM SQLAlchemy .
+
+## Instalación
+
+Use el siguiente comando en su terminal, para clonar este repositorio:
+
+```sh
+https://github.com/888Leonidas888/holbertonschool-higher_level_programming.git
+```
 
 ## Tabla de contenido
 
