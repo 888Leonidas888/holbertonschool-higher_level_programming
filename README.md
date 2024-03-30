@@ -29,3 +29,4 @@ https://github.com/888Leonidas888/holbertonschool-higher_level_programming.git
 14. [SQL_more_queries](./SQL_more_queries/)
 15. [Python-object_relational_mapping](./python-object_relational_mapping/)
 16. [Javascript-dom_manipulation](./javascript-dom_manipulation/)
+17. [Javascript-web_jquery](./javascript-web_jquery/)
