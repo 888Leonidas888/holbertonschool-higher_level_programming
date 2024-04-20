@@ -1,4 +1,4 @@
-const urlBase = "https://swapi-api.hbtn.io/api/people/1/?format=json";
+const urlBase = "https://swapi-api.hbtn.io/api/people/5/?format=json";
 fetch(urlBase)
   .then((response) => {
     if (!response.ok) {
