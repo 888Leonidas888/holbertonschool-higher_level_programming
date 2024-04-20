@@ -1,4 +1,4 @@
-$.getJSON('https://swapi-api.hbtn.io/api/people5/5/?format=json')
+$.getJSON('https://swapi-api.hbtn.io/api/people/5/?format=json')
   .done(function (data) {
     $('div#character').text(data.name);
   })
